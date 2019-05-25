@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.james.suv.AcessoBD.ListarVacinas;
@@ -15,11 +14,11 @@ import com.example.james.suv.R;
 
 public class VacinasDetalhes extends AppCompatActivity {
 
-    EditText editNomeVacina,editNomeFuncionarioResp,editPrimeiraDose,editSegundaDose,
+    TextView editNomeVacina,editNomeFuncionarioResp,editPrimeiraDose,editSegundaDose,
             editTerceiraDose,editPrimeiroReforco,editSegundoReforco;
     TextView tID,lblDetalhesPrimeiraDose,lblDetalhesSegundaDose,lblDetalhesTerceiraDose,lblDetalhesPrimeiroReforco,
             lblDetalhesSegundoReforco;
-    Button btExcluir,btVoltar;
+    Button btVoltar;
     long id;
     ListarVacinas list=new ListarVacinas();
 
@@ -29,7 +28,6 @@ public class VacinasDetalhes extends AppCompatActivity {
         setContentView(R.layout.activity_vacinas_detalhes);
 
         editNomeVacina = findViewById(R.id.editNomeVacina);
-        editNomeFuncionarioResp = findViewById(R.id.editNomeFuncionarioResp);
         editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
         editSegundaDose = findViewById(R.id.editSegundaDose);
         editTerceiraDose = findViewById(R.id.editTerceiraDose);
@@ -119,7 +117,6 @@ public class VacinasDetalhes extends AppCompatActivity {
 
         try {
             editNomeVacina = findViewById(R.id.editNomeVacina);
-            editNomeFuncionarioResp = findViewById(R.id.editNomeFuncionarioResp);
             editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
             editSegundaDose = findViewById(R.id.editSegundaDose);
             editTerceiraDose = findViewById(R.id.editTerceiraDose);
@@ -128,7 +125,6 @@ public class VacinasDetalhes extends AppCompatActivity {
 
             tID = (TextView) findViewById(R.id.tvID);
 
-            btExcluir = (Button) findViewById(R.id.btnExcluir);
             btVoltar = (Button) findViewById(R.id.btnVoltar);
 
             Intent i = getIntent();
@@ -139,13 +135,6 @@ public class VacinasDetalhes extends AppCompatActivity {
             id = Long.parseLong(memberID);
 
             tID.setText(memberID);
-
-            btExcluir.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
 
             btVoltar.setOnClickListener(new View.OnClickListener() {
                 @Override

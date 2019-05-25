@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cliente.Vacinas.DetalhesVacina">
+    tools:context=".DetalhesVacinaCliente">
 
     <TextView
         android:id="@+id/textView"
@@ -34,111 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/btnAtualizar"
-        android:layout_width="109dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/btAtualizar"
-        app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
-
-    <Button
-        android:id="@+id/btnExcluir"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="44dp"
-        android:text="@string/btExcluir"
-        app:layout_constraintEnd_toStartOf="@+id/btnVoltar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnAtualizar"
-        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
-
-    <Button
-        android:id="@+id/btnVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/btVoltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
-
-    <EditText
-        android:id="@+id/editNomeVacina"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Nome da Vacina"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblNomeVacina"
-        app:layout_constraintTop_toBottomOf="@+id/tvID" />
-
-    <EditText
-        android:id="@+id/editRegistroProf"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Registro Prof."
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblRegistroProf"
-        app:layout_constraintTop_toBottomOf="@+id/editLocal" />
-
-    <EditText
-        android:id="@+id/editNomeFunc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Nome Func"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblNomeFunc"
-        app:layout_constraintTop_toBottomOf="@+id/editNomeVacina" />
-
-    <EditText
-        android:id="@+id/editData"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Data"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblData"
-        app:layout_constraintTop_toBottomOf="@+id/editNomeFunc" />
-
-    <EditText
-        android:id="@+id/editLocal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Local"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblLocal"
-        app:layout_constraintTop_toBottomOf="@+id/editData" />
-
     <TextView
         android:id="@+id/lblNomeVacina"
         android:layout_width="wrap_content"
@@ -150,6 +45,20 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/editNomeVacina"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+    <TextView
+        android:id="@+id/editNomeVacina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Nome da Vacina"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNomeVacina"
         app:layout_constraintTop_toBottomOf="@+id/tvID" />
 
     <TextView
@@ -166,30 +75,19 @@
         app:layout_constraintTop_toBottomOf="@+id/lblNomeVacina" />
 
     <TextView
-        android:id="@+id/lblData"
-        android:layout_width="wrap_content"
+        android:id="@+id/editNomeFunc"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="Data da aplicação"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="Nome Func"
+        android:inputType="textPersonName"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editData"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblNomeFunc" />
-
-    <TextView
-        android:id="@+id/lblLocal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="Local"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editLocal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblData" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNomeFunc"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeVacina" />
 
     <TextView
         android:id="@+id/lblRegistroProf"
@@ -203,5 +101,98 @@
         app:layout_constraintEnd_toStartOf="@+id/editRegistroProf"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblLocal" />
+
+    <TextView
+        android:id="@+id/editRegistroProf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Registro Prof."
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblRegistroProf"
+        app:layout_constraintTop_toBottomOf="@+id/editLocal" />
+
+    <TextView
+        android:id="@+id/lblData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Data da aplicação"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNomeFunc" />
+
+    <TextView
+        android:id="@+id/editData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblData"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeFunc" />
+
+    <TextView
+        android:id="@+id/lblLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Local"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editLocal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblData" />
+
+    <TextView
+        android:id="@+id/editLocal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Local"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblLocal"
+        app:layout_constraintTop_toBottomOf="@+id/editData" />
+
+    <Button
+        android:id="@+id/btnAtualizar"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/btAtualizar"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
 
 </android.support.constraint.ConstraintLayout>

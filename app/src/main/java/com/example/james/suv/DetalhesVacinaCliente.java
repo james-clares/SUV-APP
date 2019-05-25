@@ -1,4 +1,4 @@
-package com.example.james.suv.Cliente.Vacinas;
+package com.example.james.suv;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,25 +8,23 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.james.suv.AcessoBD.ListarVacinas;
-import com.example.james.suv.Funcionario.Vacinas.AlterarVacinas;
-import com.example.james.suv.R;
+import com.example.james.suv.Cliente.Vacinas.DetalhesVacina;
 
-public class DetalhesVacina extends AppCompatActivity {
+public class DetalhesVacinaCliente extends AppCompatActivity {
     EditText editNomeVacina,editNomeFunc,editData,editLocal,editRegistroProf;
-    Button btnAtualizar,btnExcluir,btnVoltar;
+    Button btnAtualizar,btnVoltar;
     ListarVacinas list=new ListarVacinas();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalhes_vacina);
+        setContentView(R.layout.activity_detalhes_vacina_cliente);
         editNomeVacina=findViewById(R.id.editNomeVacina);
         editNomeFunc=findViewById(R.id.editNomeFunc);
         editData=findViewById(R.id.editData);
         editLocal=findViewById(R.id.editLocal);
         editRegistroProf=findViewById(R.id.editRegistroProf);
         btnAtualizar=findViewById(R.id.btnAtualizar);
-        btnExcluir=findViewById(R.id.btnExcluir);
         btnVoltar=findViewById(R.id.btnVoltar);
 
         editNomeVacina.setText(list.getNome_vacina());
@@ -38,7 +36,7 @@ public class DetalhesVacina extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pi=new Intent(getApplicationContext(),AlterarVacinas.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent pi=new Intent(getApplicationContext(),DetalhesVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(pi);
             }
         });
