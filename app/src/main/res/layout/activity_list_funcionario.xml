@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblIDFunc"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:padding="10dp"
+        android:text="ID"
+        android:textColor="#252525"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lblCPF"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblIDFunc"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="-44dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:text="CPF"
+        android:textColor="#252525"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/lblNomeFunc"
+        android:layout_width="278dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/lblIDFunc"
+        android:background="#fff"
+        android:text="NomeFunc" />
+</RelativeLayout>

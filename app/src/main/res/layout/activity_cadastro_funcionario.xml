@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="28dp"
+            android:text="Cadastro de Funcionário"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lblNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/idNomeFunc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Digite o nome"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/lblTipo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tipo"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/idTipo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/lblGenero"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="Gênero"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/idGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:id="@+id/lblIdade"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="10dp"
+            android:text="Idade"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/idIdade"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lblCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/idCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Digite o CPF"
+                android:inputType="textPersonName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@id/lblSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_marginBottom="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/idSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Digite a senha"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCadastrarFunc"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="28dp"
+            android:text="Cadastrar" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="28dp"
+            android:text="Cancelar" />
+    </LinearLayout>
+</ScrollView>

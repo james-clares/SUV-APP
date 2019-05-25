@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Funcionario.Vacinas.AlterarVacinas">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Alterar Vacina"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnAtualizar"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/btAtualizar"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeFuncionarioResp" />
+
+
+    <EditText
+        android:id="@+id/editNomeVacina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Nome Vacina"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNomeVacina"
+        app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+    <EditText
+        android:id="@+id/editNomeFuncionarioResp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Funcionário Responsável"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSegundoReforco" />
+
+    <Button
+        android:id="@+id/btnExcluir"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:text="@string/btExcluir"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnAtualizar"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeFuncionarioResp" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeFuncionarioResp" />
+
+    <EditText
+        android:id="@+id/editPrimeiraDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Primeira Dose"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/lblDetalhesPrimeiraDose"
+        app:layout_constraintStart_toEndOf="@+id/lbl1Dose"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeVacina" />
+
+    <EditText
+        android:id="@+id/editSegundaDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Segunda Dose"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/lblDetalhesSegundaDose"
+        app:layout_constraintStart_toEndOf="@+id/lbl2Dose"
+        app:layout_constraintTop_toBottomOf="@+id/editPrimeiraDose" />
+
+    <EditText
+        android:id="@+id/editTerceiraDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Terceira Dose"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/lblDetalhesTerceiraDose"
+        app:layout_constraintStart_toEndOf="@+id/lbl3Dose"
+        app:layout_constraintTop_toBottomOf="@+id/editSegundaDose" />
+
+    <EditText
+        android:id="@+id/editPrimeiroReforco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Primeiro Reforço"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/lblDetalhesPrimeiroReforco"
+        app:layout_constraintStart_toEndOf="@+id/lbl1Reforco"
+        app:layout_constraintTop_toBottomOf="@+id/editTerceiraDose" />
+
+    <EditText
+        android:id="@+id/editSegundoReforco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Segundo Reforço"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/lblDetalhesSegundoReforco"
+        app:layout_constraintStart_toEndOf="@+id/lbl2Reforco"
+        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroReforco" />
+
+    <TextView
+        android:id="@+id/lblDetalhesPrimeiraDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ver Detalhes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editPrimeiraDose"
+        app:layout_constraintTop_toBottomOf="@+id/editNomeVacina" />
+
+    <TextView
+        android:id="@+id/lblDetalhesSegundaDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ver Detalhes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editSegundaDose"
+        app:layout_constraintTop_toBottomOf="@+id/lblDetalhesPrimeiraDose" />
+
+    <TextView
+        android:id="@+id/lblDetalhesTerceiraDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ver Detalhes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTerceiraDose"
+        app:layout_constraintTop_toBottomOf="@+id/lblDetalhesSegundaDose" />
+
+    <TextView
+        android:id="@+id/lblNomeVacina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:text="Nome da Vacina"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editNomeVacina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+    <TextView
+        android:id="@+id/lblDetalhesPrimeiroReforco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ver Detalhes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editPrimeiroReforco"
+        app:layout_constraintTop_toBottomOf="@+id/lblDetalhesTerceiraDose" />
+
+    <TextView
+        android:id="@+id/lblDetalhesSegundoReforco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Ver Detalhes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editSegundoReforco"
+        app:layout_constraintTop_toBottomOf="@+id/lblDetalhesPrimeiroReforco" />
+
+    <TextView
+        android:id="@+id/lbl1Dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="1º Dose"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editPrimeiraDose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNomeVacina" />
+
+    <TextView
+        android:id="@+id/lbl2Dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="2º Dose"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editSegundaDose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl1Dose" />
+
+    <TextView
+        android:id="@+id/lbl3Dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="3º Dose"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTerceiraDose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl2Dose" />
+
+    <TextView
+        android:id="@+id/lbl1Reforco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="1º Reforço"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editPrimeiroReforco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl3Dose" />
+
+    <TextView
+        android:id="@+id/lbl2Reforco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="2º Reforço"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editSegundoReforco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl1Reforco" />
+
+
+</android.support.constraint.ConstraintLayout>

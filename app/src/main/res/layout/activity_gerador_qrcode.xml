@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GeradorQRCode">
+
+    <TextView
+        android:id="@+id/lblGeradorQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="7dp"
+        android:text="Gerador de QRCode"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="53dp"
+        android:hint="Informe a palavra para codificação"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/btnGerar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivQRCode"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="29dp"
+        android:text="Gerar QR Code"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/btnVoltar"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivQRCode"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="27dp"
+        android:layout_toEndOf="@+id/btnGerar"
+        android:text="Voltar"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_above="@+id/ivQRCode"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivQRCode"
+        android:layout_width="330dp"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

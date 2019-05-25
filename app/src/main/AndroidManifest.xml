@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.james.suv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="write_external_storage" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Cliente.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Cliente.Perfil" />
+        <activity android:name=".Cliente.Cadastro" />
+        <activity android:name=".Cliente.Dados_usuario" />
+        <activity android:name=".Cliente.Vacinas.VacinasRecentes" />
+        <activity android:name=".Funcionario.Vacinas.AlterarVacinas" />
+        <activity android:name=".Empresa.LoginEmpresa" />
+        <activity android:name=".Empresa.CadastroEmpresa" />
+        <activity android:name=".Empresa.PerfilEmpresa" />
+        <activity android:name=".Empresa.DadosEmpresa" />
+        <activity android:name=".Visualizar_contato" />
+        <activity android:name=".ModificarContato" />
+        <activity android:name=".Cliente.AlterarSenhaUsuario" />
+        <activity android:name=".Empresa.AlterarSenhaEmpresa" />
+        <activity android:name=".Cliente.CarterinhaDigital" />
+        <activity android:name=".GeradorQRCode" />
+        <activity android:name=".Empresa.Clientes" />
+        <activity android:name=".Cliente.EsqueciMinhaSenhaCliente" />
+        <activity android:name=".incluirContato" />
+        <activity android:name=".Principal" />
+        <activity android:name=".Empresa.ClienteEmpresa.ClienteEmpresa" />
+        <activity android:name=".Empresa.ClienteEmpresa.listtemplate" />
+        <activity android:name=".Empresa.FuncionarioEmpresa.FuncionarioEmpresa" />
+        <activity android:name=".Empresa.FuncionarioEmpresa.listFuncionario" />
+        <activity android:name=".Cliente.Vacinas.listVacinas" />
+        <activity android:name=".Cliente.Vacinas.VacinaCliente" />
+        <activity android:name=".LeitorQRCode" />
+        <activity android:name=".Funcionario.LoginFuncionario" />
+        <activity android:name=".Funcionario.PerfilFuncionario" />
+        <activity android:name=".Funcionario.AlterarSenhaFuncionario" />
+        <activity android:name=".Funcionario.DadosFuncionario" />
+        <activity android:name=".Funcionario.Vacinas.NovaVacina" />
+        <activity android:name=".Cliente.Vacinas.DetalhesVacina" />
+        <activity android:name=".Empresa.FuncionarioEmpresa.CadastroFuncionario" />
+        <activity android:name=".Empresa.CadastrarVacina" />
+        <activity android:name=".Funcionario.BuscaCliente" />
+        <activity android:name=".Cliente.MenuCliente" />
+        <activity android:name=".Funcionario.MenuFuncionario" />
+        <activity android:name=".Empresa.MenuEmpresa" />
+        <activity android:name=".Funcionario.Vacinas.UltimasVacinasFunc" />
+        <activity android:name=".GerarPDF" />
+        <activity android:name=".Funcionario.Vacinas.AtualizarVacina" />
+        <activity android:name=".listCliente" />
+        <activity android:name=".Funcionario.Vacinas.VacinaFuncionario" />
+        <activity android:name=".Cliente.Vacinas.VacinasDetalhes"></activity>
+    </application>
+
+</manifest>
