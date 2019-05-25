@@ -32,7 +32,6 @@ public class AlterarVacinas extends AppCompatActivity {
         setContentView(R.layout.activity_alterar_vacinas);
 
         editNomeVacina = findViewById(R.id.editNomeVacina);
-        editNomeFuncionarioResp = findViewById(R.id.editNomeFuncionarioResp);
         editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
         editSegundaDose = findViewById(R.id.editSegundaDose);
         editTerceiraDose = findViewById(R.id.editTerceiraDose);
@@ -142,7 +141,6 @@ public class AlterarVacinas extends AppCompatActivity {
 
         try {
             editNomeVacina = findViewById(R.id.editNomeVacina);
-            editNomeFuncionarioResp = findViewById(R.id.editNomeFuncionarioResp);
             editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
             editSegundaDose = findViewById(R.id.editSegundaDose);
             editTerceiraDose = findViewById(R.id.editTerceiraDose);
