@@ -1,4 +1,4 @@
-package com.example.james.suv;
+package com.example.james.suv.Cliente;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.example.james.suv.AcessoBD.ListarVacinas;
 import com.example.james.suv.Cliente.Vacinas.DetalhesVacina;
+import com.example.james.suv.R;
 
 public class DetalhesVacinaCliente extends AppCompatActivity {
     EditText editNomeVacina,editNomeFunc,editData,editLocal,editRegistroProf;

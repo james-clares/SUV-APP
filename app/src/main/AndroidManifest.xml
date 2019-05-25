@@ -63,7 +63,7 @@
         <activity android:name=".listCliente" />
         <activity android:name=".Funcionario.Vacinas.VacinaFuncionario" />
         <activity android:name=".Cliente.Vacinas.VacinasDetalhes" />
-        <activity android:name=".DetalhesVacinaCliente"></activity>
+        <activity android:name=".Cliente.DetalhesVacinaCliente"></activity>
     </application>
 
 </manifest>
