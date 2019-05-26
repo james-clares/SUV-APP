@@ -3,25 +3,22 @@ package com.example.james.suv.Funcionario.Vacinas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.james.suv.AcessoBD.Empresa;
 import com.example.james.suv.AcessoBD.ListarVacinas;
 import com.example.james.suv.Cliente.Vacinas.DetalhesVacina;
-import com.example.james.suv.Principal;
 import com.example.james.suv.R;
 
 public class AlterarVacinas extends AppCompatActivity {
 
     EditText editNomeVacina,editNomeFuncionarioResp,editPrimeiraDose,editSegundaDose,
     editTerceiraDose,editPrimeiroReforco,editSegundoReforco;
-    TextView tID,lblDetalhesPrimeiraDose,lblDetalhesSegundaDose,lblDetalhesTerceiraDose,lblDetalhesPrimeiroReforco,
+    TextView lblDetalhesPrimeiraDose,lblDetalhesSegundaDose,lblDetalhesTerceiraDose,lblDetalhesPrimeiroReforco,
             lblDetalhesSegundoReforco;
-    Button btAtualizar,btExcluir,btVoltar;
+    Button btAtualizar,btVoltar;
     long id;
 	ListarVacinas list=new ListarVacinas();
 
@@ -44,6 +41,8 @@ public class AlterarVacinas extends AppCompatActivity {
         lblDetalhesPrimeiroReforco=findViewById(R.id.lblDetalhesPrimeiroReforco);
         lblDetalhesSegundoReforco=findViewById(R.id.lblDetalhesSegundoReforco);
 
+        btAtualizar=findViewById(R.id.btnAtualizar);
+        btVoltar=findViewById(R.id.btnVoltar);
         //list.carregarTodasVacinas();
         editNomeVacina.setText(list.getNome_vacina());
         editPrimeiraDose.setText(list.getData1());
@@ -139,82 +138,20 @@ public class AlterarVacinas extends AppCompatActivity {
             }
         });
 
-        try {
-            editNomeVacina = findViewById(R.id.editNomeVacina);
-            editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
-            editSegundaDose = findViewById(R.id.editSegundaDose);
-            editTerceiraDose = findViewById(R.id.editTerceiraDose);
-            editPrimeiroReforco = findViewById(R.id.editPrimeiroReforco);
-            editSegundoReforco = findViewById(R.id.editSegundoReforco);
+		btAtualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pi=new Intent(AlterarVacinas.this,AtualizarVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(pi);
+            }
+        });
 
-            tID = (TextView) findViewById(R.id.tvID);
-
-            btAtualizar = (Button) findViewById(R.id.btnAtualizar);
-            btExcluir = (Button) findViewById(R.id.btnExcluir);
-            btVoltar = (Button) findViewById(R.id.btnVoltar);
-
-            Intent i = getIntent();
-            String memberID = i.getStringExtra("memberID");
-            String memberName = i.getStringExtra("memberName");
-            String memberEmail = i.getStringExtra("memberEmail");
-
-            id = Long.parseLong(memberID);
-
-            tID.setText(memberID);
-            //editNomeVacina.setText(memberName);
-            //editNomeFuncionarioResp.setText(memberEmail);
-            //editNomeVacina.setText(memberEmail);
-
-			
-			//editNomeVacina.setText(list.getNome_vacina());
-            //editNomeFuncionarioResp.setText(list.getId_func_fk());
-            //editPrimeiraDose.setText(list.getData1());
-            //editSegundaDose.setText(list.getData2());
-            //editTerceiraDose.setText(list.getData3());
-            //editPrimeiroReforco = findViewById(R.id.editPrimeiroReforco);
-            //editSegundoReforco = findViewById(R.id.editSegundoReforco);
-			
-            btExcluir.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //dbcon.excluirRegistro(id);
-                    Empresa emp = new Empresa();
-                    emp.deletarCliente(id);
-                    //voltarPrincipal();
-                    /*if (emp.deletarCliente(id) == true) {
-                        voltarPrincipal();
-                        Toast.makeText(AlterarVacinas.this, "Vacina deletada", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(AlterarVacinas.this, "Erro ao deletar vacina", Toast.LENGTH_SHORT).show();
-                    }*/
-                }
-            });
-
-            btAtualizar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String memName_upd = editNomeVacina.getText().toString();
-                    String memEmail_upd = editNomeFuncionarioResp.getText().toString();
-                    //dbcon.atualizarRegistro(id, memName_upd, memEmail_upd);
-                    //voltarPrincipal();
-
-                    Intent pi=new Intent(AlterarVacinas.this,AtualizarVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(pi);
-                }
-            });
-            btVoltar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-        } catch (Exception e) {
-            Log.e("ModificarContato", e.toString());
-        }
-    }
-
-    public void voltarPrincipal(){
-        Intent pi=new Intent(getApplicationContext(),Principal.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(pi);
+        btVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pi=new Intent(AlterarVacinas.this,VacinaFuncionario.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(pi);
+            }
+        });
     }
 }

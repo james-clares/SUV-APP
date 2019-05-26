@@ -3,20 +3,19 @@ package com.example.james.suv.Cliente.Vacinas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.james.suv.AcessoBD.ListarVacinas;
-import com.example.james.suv.Principal;
+import com.example.james.suv.Cliente.DetalhesVacinaCliente;
 import com.example.james.suv.R;
 
 public class VacinasDetalhes extends AppCompatActivity {
 
-    TextView editNomeVacina,editNomeFuncionarioResp,editPrimeiraDose,editSegundaDose,
+    TextView editNomeVacina,editPrimeiraDose,editSegundaDose,
             editTerceiraDose,editPrimeiroReforco,editSegundoReforco;
-    TextView tID,lblDetalhesPrimeiraDose,lblDetalhesSegundaDose,lblDetalhesTerceiraDose,lblDetalhesPrimeiroReforco,
+    TextView lblDetalhesPrimeiraDose,lblDetalhesSegundaDose,lblDetalhesTerceiraDose,lblDetalhesPrimeiroReforco,
             lblDetalhesSegundoReforco;
     Button btVoltar;
     long id;
@@ -40,6 +39,7 @@ public class VacinasDetalhes extends AppCompatActivity {
         lblDetalhesPrimeiroReforco=findViewById(R.id.lblDetalhesPrimeiroReforco);
         lblDetalhesSegundoReforco=findViewById(R.id.lblDetalhesSegundoReforco);
 
+        btVoltar = (Button) findViewById(R.id.btnVoltar);
         //list.carregarTodasVacinas();
         editNomeVacina.setText(list.getNome_vacina());
         editPrimeiraDose.setText(list.getData1());
@@ -90,7 +90,7 @@ public class VacinasDetalhes extends AppCompatActivity {
             public void onClick(View v) {
                 String prm="primeira";
                 list.carregarDetalhesVacina(prm);
-                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacinaCliente.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(m);
             }
         });
@@ -100,7 +100,7 @@ public class VacinasDetalhes extends AppCompatActivity {
             public void onClick(View v) {
                 String prm="segunda";
                 list.carregarDetalhesVacina(prm);
-                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacinaCliente.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(m);
             }
         });
@@ -110,45 +110,36 @@ public class VacinasDetalhes extends AppCompatActivity {
             public void onClick(View v) {
                 String prm="terceira";
                 list.carregarDetalhesVacina(prm);
-                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacinaCliente.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(m);
             }
         });
 
-        try {
-            editNomeVacina = findViewById(R.id.editNomeVacina);
-            editPrimeiraDose = findViewById(R.id.editPrimeiraDose);
-            editSegundaDose = findViewById(R.id.editSegundaDose);
-            editTerceiraDose = findViewById(R.id.editTerceiraDose);
-            editPrimeiroReforco = findViewById(R.id.editPrimeiroReforco);
-            editSegundoReforco = findViewById(R.id.editSegundoReforco);
+        lblDetalhesPrimeiroReforco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String prm="1reforco";
+                list.carregarDetalhesVacina(prm);
+                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacinaCliente.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(m);
+            }
+        });
 
-            tID = (TextView) findViewById(R.id.tvID);
+        lblDetalhesSegundoReforco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String prm="2reforco";
+                list.carregarDetalhesVacina(prm);
+                Intent m = new Intent(VacinasDetalhes.this, DetalhesVacinaCliente.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(m);
+            }
+        });
 
-            btVoltar = (Button) findViewById(R.id.btnVoltar);
-
-            Intent i = getIntent();
-            String memberID = i.getStringExtra("memberID");
-            String memberName = i.getStringExtra("memberName");
-            String memberEmail = i.getStringExtra("memberEmail");
-
-            id = Long.parseLong(memberID);
-
-            tID.setText(memberID);
-
-            btVoltar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-        } catch (Exception e) {
-            Log.e("ModificarContato", e.toString());
-        }
-    }
-
-    public void voltarPrincipal(){
-        Intent pi=new Intent(getApplicationContext(),Principal.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(pi);
+        btVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

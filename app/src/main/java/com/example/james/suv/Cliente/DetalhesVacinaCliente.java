@@ -5,15 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.james.suv.AcessoBD.ListarVacinas;
-import com.example.james.suv.Cliente.Vacinas.DetalhesVacina;
+import com.example.james.suv.Cliente.Vacinas.VacinasDetalhes;
 import com.example.james.suv.R;
 
 public class DetalhesVacinaCliente extends AppCompatActivity {
-    EditText editNomeVacina,editNomeFunc,editData,editLocal,editRegistroProf;
-    Button btnAtualizar,btnVoltar;
+    TextView editNomeVacina,editNomeFunc,editData,editLocal,editRegistroProf;
+    Button btnVoltar;
     ListarVacinas list=new ListarVacinas();
 
     @Override
@@ -25,7 +25,6 @@ public class DetalhesVacinaCliente extends AppCompatActivity {
         editData=findViewById(R.id.editData);
         editLocal=findViewById(R.id.editLocal);
         editRegistroProf=findViewById(R.id.editRegistroProf);
-        btnAtualizar=findViewById(R.id.btnAtualizar);
         btnVoltar=findViewById(R.id.btnVoltar);
 
         editNomeVacina.setText(list.getNome_vacina());
@@ -37,7 +36,7 @@ public class DetalhesVacinaCliente extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pi=new Intent(getApplicationContext(),DetalhesVacina.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent pi=new Intent(getApplicationContext(),VacinasDetalhes.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(pi);
             }
         });

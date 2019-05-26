@@ -174,18 +174,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editData" />
 
     <Button
-        android:id="@+id/btnAtualizar"
-        android:layout_width="109dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/btAtualizar"
-        app:layout_constraintEnd_toStartOf="@+id/btnExcluir"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editRegistroProf" />
-
-    <Button
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
