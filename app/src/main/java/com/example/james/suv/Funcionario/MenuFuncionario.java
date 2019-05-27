@@ -44,13 +44,13 @@ public class MenuFuncionario extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_func);
         listSliding = new ArrayList<>();
         //Add item for sliding list
-        listSliding.add(new ItemSlideMenu(R.drawable.ic_action_settings, "Bem- vindo "+func.getNome()));
-        listSliding.add(new ItemSlideMenu(R.drawable.ic_action_settings, "Últimas Vacinas"));
-        listSliding.add(new ItemSlideMenu(R.drawable.ic_action_settings, "Dados do Funcionário"));
-        listSliding.add(new ItemSlideMenu(R.drawable.ic_action_about, "Alterar Senha"));      ;
-        listSliding.add(new ItemSlideMenu(R.mipmap.ic_launcher, "Ler QR Code"));
-        listSliding.add(new ItemSlideMenu(R.mipmap.ic_launcher, "Consultar Vacina"));
-        listSliding.add(new ItemSlideMenu(R.mipmap.ic_launcher, "Sair"));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon, "Bem- vindo "+func.getNome()));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_historico, "Últimas Vacinas"));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_editar, "Dados do Funcionário"));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_conf, "Alterar Senha"));      ;
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_conf, "Ler QR Code"));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_vacina, "Consultar Vacina"));
+        listSliding.add(new ItemSlideMenu(R.drawable.icon_sair, "Sair"));
         adapter = new SlidingMenuAdapter(this, listSliding);
         listViewSliding.setAdapter(adapter);
 
@@ -125,7 +125,7 @@ public class MenuFuncionario extends AppCompatActivity {
             case 0:
                 break;
             case 1:
-                fragment = new UltimasVacinasFunc();
+                //fragment = new UltimasVacinasFunc();
                 break;
             case 2:
                 fragment = new DadosFuncionario();

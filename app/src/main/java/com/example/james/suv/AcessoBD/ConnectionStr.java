@@ -16,17 +16,13 @@ public class ConnectionStr {
         StrictMode.setThreadPolicy(policy);
         Connection connection = null;
         String ConnectionURL = null;
-        String user = "James";
-        String password = "James 2015";
-        String database = "SUV";
-        String server = "192.168.0.105";
+        String user = "suv";
+        String password = "Senha@123";
+        String database = "suv";
+        String server = "den1.mssql7.gear.host";
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-			//Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            //ConnectionURL = "jdbc:jtds:sqlserver://" + server + ";databaseName=" + database + ";user=" + user + ";password=" + password + ";";
-            //ConnectionURL="jdbc:sqlserver://james-server.database.windows.net;database=SUV;user=James@james-server;password=James@123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-            //ConnectionURL = "jdbc:jtds:sqlserver://james-server.database.windows.net;databaseName=SUV;user=James@james-server;password=Senha@123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-			ConnectionURL = "jdbc:jtds:sqlserver://den1.mssql7.gear.host;databaseName=suv;user=suv;password=Senha@123;";
+            ConnectionURL = "jdbc:jtds:sqlserver://" + server + ";databaseName=" + database + ";user=" + user + ";password=" + password + ";";
             connection = DriverManager.getConnection(ConnectionURL);
         } catch (SQLException se) {
             Log.e("error here 1 : ", se.getMessage());

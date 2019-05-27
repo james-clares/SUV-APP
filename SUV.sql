@@ -447,20 +447,12 @@ union
 select a.*,b.nome_vacina from segundo_reforco  as a  inner join Tipos_vacinas as b on a.id_Tipo_Vacina_fk=b.id_tipo_vacina where id_func_fk=@idFunc
 order by data desc;
 
-create procedure VacinasRecentesCli 
+create procedure VacinasRecentesCli
 @idcli int
 as
-select a.nome,b.id_cli_fk,b.id_tipo_vacina_fk,c.nome_vacina,d.id_primeira_dose,convert(varchar,d.data,103)as data,
-e.id_segunda_dose,convert(varchar,e.data,103)as data2,f.id_terceira_dose,convert(varchar,f.data,103)as data3,
-g.id_primeiro_reforco,convert(varchar,g.data,103)as data4,h.id_segundo_reforco,convert(varchar,h.data,103)as data5 from
+select a.nome,b.id_cli_fk,b.ult_atual as 'data',b.id_tipo_vacina_fk,c.nome_vacina from 
 cliente as a inner join vacinas as b on a.id_cli= b.id_cli_fk 
-inner join Tipos_vacinas as c on b.id_tipo_vacina_fk=c.id_Tipo_Vacina 
-full join primeira_dose as d on b.primeira_dose_fk=d.id_primeira_dose 
-full join segunda_dose as e on b.segunda_dose_fk=e.id_segunda_dose 
-full join terceira_dose as f on b.terceira_dose_fk=f.id_terceira_dose 
-full join primeiro_reforco as g on b.primeiro_reforco_fk=g.id_primeiro_reforco
-full join segundo_reforco as h on b.segundo_reforco_fk=h.id_segundo_reforco
-where a.id_cli=@idcli
+inner join Tipos_vacinas as c on b.id_tipo_vacina_fk=c.id_Tipo_Vacina where a.id_cli=@idcli order by data desc
 /*
 select convert(varchar,data_nasc,103)from cliente;
 
